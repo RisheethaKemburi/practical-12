@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+struct employee{
+	char ename[20],desg[20];
+	float bsal,hra,da,ta,pf,tax,gross,net,
+  };
+void main()
+{
+	struct employee e;
+	clrscr();
+	printf("enter the name of the employees:\n");
+	scanf("%s",&e.emane);
+	printf("enter the desgination:\n");
+	scanf("%s",&e.desg);
+	printf("enter the basic salary:\n");
+	scanf("%f",&e.bsal);
+	e.da=30*e.bsal/100;
+	e.hra=10*e.bsal/100;
+	e.ta=10*e.bsal/100;
+	e.pf=10*e.bsal/100;
+	e.gross=e.bsal+e.hra+e.da+e.ta;
+	e.net=e.gross-(e.pf);
+	printf("employee name=%s",e.ename);
+	printf("designation=%s\n",e.desg);
+	printf("hra=%f\n",e.hra);
+	printf("da=%f\n",e.da);
+	printf("ta=%f\n",e.ta);
+	printf("pf=%f\n",e.pf);
+	printf("gross=%f\t netsal=%f\n",e.gross,e.net);
+	getch();
+}
